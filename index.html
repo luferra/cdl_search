@@ -16,16 +16,183 @@
   <!-- Custom styles for this template -->
   <link href="css/business-frontpage.css" rel="stylesheet">
 
+  <!-- javascript libraries -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 
+
+  <!--popover link-->
   <script>
     $(function () {
       $('[data-toggle="popover"]').popover()
     })
-  </script>
 
+    // $(function showData(optionVal) {
+    //   switch (optionVal.value) {
+    //     case "ammi":
+    //       $("#infoAmmi1").css("display", "visible");
+    //       $("#infoAmmi2").css("display", "visible");
+    //       break;
+    //     default:
+    //       console.log("default case");
+    //   }
+    // })
+    jQuery(document).ready(function($){
+      $("#selectData").change(function(){
+        var selectedOption = $(this).find(":selected").val();
+        console.log(selectedOption);
+        switch (selectedOption) {
+        case "ammi":
+          $("#infoAmmi1").show();
+          $("#infoAmmi2").show();
+          $("#curricola").hide();
+          $("#coorte").hide();
+          $("#formative").hide();
+          $("#lingue1").hide();
+          $("#lingue2").hide();
+          $("#immatricolazione1").hide();
+          $("#immatricolazione2").hide();
+          $("#manifesto1").hide();
+          $("#manifesto2").hide();
+          $("#ruoli1").hide();
+          $("#ruoli2").hide();
+          $("#rawData").hide()
+          break;
+        case "curri":
+          $("#infoAmmi1").hide();
+          $("#infoAmmi2").hide();
+          $("#curricola").show();
+          $("#coorte").hide();
+          $("#formative").hide();
+          $("#lingue1").hide();
+          $("#lingue2").hide();
+          $("#immatricolazione1").hide();
+          $("#immatricolazione2").hide();
+          $("#manifesto1").hide();
+          $("#manifesto2").hide();
+          $("#ruoli1").hide();
+          $("#ruoli2").hide();
+          $("#rawData").hide()
+          break;
+        case "coor":
+          $("#infoAmmi1").hide();
+          $("#infoAmmi2").hide();
+          $("#curricola").hide();
+          $("#coorte").show();
+          $("#formative").hide();
+          $("#lingue1").hide();
+          $("#lingue2").hide();
+          $("#immatricolazione1").hide();
+          $("#immatricolazione2").hide();
+          $("#manifesto1").hide();
+          $("#manifesto2").hide();
+          $("#ruoli1").hide();
+          $("#ruoli2").hide();
+          $("#rawData").hide()
+          break;
+        case "forma":
+          $("#infoAmmi1").hide();
+          $("#infoAmmi2").hide();
+          $("#curricola").hide();
+          $("#coorte").hide();
+          $("#formative").show();
+          $("#lingue1").hide();
+          $("#lingue2").hide();
+          $("#immatricolazione1").hide();
+          $("#immatricolazione2").hide();
+          $("#manifesto1").hide();
+          $("#manifesto2").hide();
+          $("#ruoli1").hide();
+          $("#ruoli2").hide();
+          $("#rawData").hide()
+          break;
+        case "ling":
+          $("#infoAmmi1").hide();
+          $("#infoAmmi2").hide();
+          $("#curricola").hide();
+          $("#coorte").hide();
+          $("#formative").hide();
+          $("#lingue1").show();
+          $("#lingue2").show();
+          $("#immatricolazione1").hide();
+          $("#immatricolazione2").hide();
+          $("#manifesto1").hide();
+          $("#manifesto2").hide();
+          $("#ruoli1").hide();
+          $("#ruoli2").hide();
+          $("#rawData").hide()
+          break;
+        case "imma":
+          $("#infoAmmi1").hide();
+          $("#infoAmmi2").hide();
+          $("#curricola").hide();
+          $("#coorte").hide();
+          $("#formative").hide();
+          $("#lingue1").hide();
+          $("#lingue2").hide();
+          $("#immatricolazione1").show();
+          $("#immatricolazione2").show();
+          $("#manifesto1").hide();
+          $("#manifesto2").hide();
+          $("#ruoli1").hide();
+          $("#ruoli2").hide();
+          $("#rawData").hide()
+          break;
+        case "manif":
+          $("#infoAmmi1").hide();
+          $("#infoAmmi2").hide();
+          $("#curricola").hide();
+          $("#coorte").hide();
+          $("#formative").hide();
+          $("#lingue1").hide();
+          $("#lingue2").hide();
+          $("#immatricolazione1").hide();
+          $("#immatricolazione2").hide();
+          $("#manifesto1").show();
+          $("#manifesto2").show();
+          $("#ruoli1").hide();
+          $("#ruoli2").hide();
+          $("#rawData").hide()
+          break;
+        case "role":
+          $("#infoAmmi1").hide();
+          $("#infoAmmi2").hide();
+          $("#curricola").hide();
+          $("#coorte").hide();
+          $("#formative").hide();
+          $("#lingue1").hide();
+          $("#lingue2").hide();
+          $("#immatricolazione1").hide();
+          $("#immatricolazione2").hide();
+          $("#manifesto1").hide();
+          $("#manifesto2").hide();
+          $("#ruoli1").show();
+          $("#ruoli2").show();
+          $("#rawData").hide()
+          break; 
+        case "raw":
+          $("#infoAmmi1").hide();
+          $("#infoAmmi2").hide();
+          $("#curricola").hide();
+          $("#coorte").hide();
+          $("#formative").hide();
+          $("#lingue1").hide();
+          $("#lingue2").hide();
+          $("#immatricolazione1").hide();
+          $("#immatricolazione2").hide();
+          $("#manifesto1").hide();
+          $("#manifesto2").hide();
+          $("#ruoli1").hide();
+          $("#ruoli2").hide();
+          $("#rawData").show()
+          break;  
+        default:
+          console.log("default case");
+      }
+      })
+    })
+  </script>
 </head>
 
 <body>
@@ -65,7 +232,8 @@
 
   <!-- Page Content -->
   <div class="container">
-        <!-- /.row -->
+    
+    <!-- row 1 - ricerca -->
     <div class="row">
       <div class="col-md-8 mb-5">
         <h2>Ricerca Corso di Laurea</h2>
@@ -75,7 +243,7 @@
             <input type="text" class="form-control" id="inputPassword2" placeholder="Inserisci codice CdL">
           </div>
           <div class="form-group mx-sm-3 mb-2">
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control" id="selectCoorte">
               <option>Seleziona Coorte</option>
               <option>of 1</option>
               <option>of 2</option>
@@ -90,20 +258,38 @@
           <button type="submit" class="btn btn-primary mx-sm-3 mb-2">Avvia ricerca</button>
         </form>
       </div>
-      <div class="col-md-4 mb-5" style="visibility: hidden;">
+      <div class="col-md-4 mb-5" style="visibility: visible;">
         <h2>Hai cercato</h2>
         <hr>
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">Chimica e tecnologia farmaceutiche a ciclo unico</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Laurea magistrale a ciclo unico</h6>
+            <h5 class="card-title">Molecular biology of the cell (Class LM-6)-enrolled from academic year 2015/2016</h5>
+            <h6 class="card-subtitle mb-2 text-muted">CDS MAGISTRALE</h6>
+            <hr>
+            <div>
+              <label for="selectData">Seleziona dati</label>
+              <select class="form-control" id="selectData">
+                <option value="ammi">Informazioni amministrative</option>
+                <option value="curri">Curricula</option>
+                <option value="coor">Coorte, CdS e Presidente</option>
+                <option value="forma">Attività formative</option>
+                <option value="ling">Lingue, struttura e indirizzi</option>
+                <option value="imma">Immatricolazioni</option>
+                <option value="manif">Manifesto, risorse e orari</option>
+                <option value="role">Ruoli (strutture, persone, funzioni)</option>
+                <option value="raw">Raw data</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- /.row -->
+    <!-- end row 1 - ricerca -->
 
-    <div class="row">
+
+    <!-- START STRUTTURE AMMINISTRATIVE-->
+    <!-- row 2 -->
+    <div class="row" id="infoAmmi1" style="display: none;">
       <div class="col-md-6 mb-5">
         <h3>Strutture Amministrative</h3>
         <table class="table">
@@ -144,7 +330,7 @@
         </table>
       </div>
       <div class="col-md-6 mb-5">
-        <h3>Altre info* (chiave non presente nei servizi)</h3>
+        <h3>Altre info*</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -171,11 +357,21 @@
               <td><h5><span class="badge badge-success">descrizioneCoorteEng</span></h5></td>
               <td>Enrolled from academic year 2015/2016</td>
             </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">cfuMin</span></h5></td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">anniDurataCorso</span></h5></td>
+              <td>2</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <div class="row">
+    <!-- end row 2 -->
+    <!-- row 3 -->
+    <div class="row" id="infoAmmi2" style="display: none;">
       <div class="col-md-6 mb-5">
         <h3>_relatedLinks</h3>
         <table class="table">
@@ -192,7 +388,7 @@
             </tr>
             <tr>
               <td><h5><span class="badge badge-info">href</span></h5></td>
-              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="https://apps.unimi.it/ws/offertadidattica/offertaFormativa/2020/E24of1/insegnamenti?afCompleta=true">Mostra link</button><a href="https://apps.unimi.it/ws/offertadidattica/offertaFormativa/2020/E24of1/insegnamenti?afCompleta=true" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="https://apps.unimi.it/ws/offertadidattica/offertaFormativa/2020/E24of1/insegnamenti?afCompleta=true">Mostra link</button> <a href="https://apps.unimi.it/ws/offertadidattica/offertaFormativa/2020/E24of1/insegnamenti?afCompleta=true" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
             </tr>
           </tbody>
         </table>
@@ -223,10 +419,1330 @@
         </table>
       </div>
     </div>
+    <!-- end row 3 -->
+    <!-- END STRUTTURE AMMINISTRATIVE-->
+    
+    <!-- START CURRICOLA-->
+    <!-- row 1 -->
+    <div class="row" id="curricola" style="display: none;"> 
+      <div class="col-md-6 mb-5">
+        <h3>Curricola</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-secondary">.....</span></h5></td>
+              <td>.....</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- end row 1 -->
+    <!-- END CURRICULA-->
 
+    <!-- START COORTE, CDL, PRESIDENTE-->
+    <!-- row 1 -->
+    <div class="row" id="coorte" style="display: none;"> 
+      <div class="col-md-6 mb-5">
+        <h3>Coorte</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-secondary">inizioValidita</span></h5></td>
+              <td>2016</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">fineValidita</span></h5></td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">annoInizio</span></h5></td>
+              <td>2016</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Presidenti*</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-info">presidenteCollegio</span></h5></td>
+              <td>MIRKO BARUSCOTTI</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">presidenteCorsoDiStudio</span></h5></td>
+              <td>Prof.ssa Luisa Guerrini (luisa.guerrini@unimi.it)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6 mb-5">
+        <h3>corsoDiStudio</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-success">codice</span></h5></td>
+              <td>F9Y</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">tipo</span></h5></td>
+              <td>CDS</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">descrizione</span></h5></td>
+              <td>Molecular biology of the cell (Class LM-6)</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">descrizioneEng</span></h5></td>
+              <td>Molecular biology of the cell (Class LM-6)</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">sito</span></h5></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="https://mbc.cdl.unimi.it/">Mostra link</button> <a href="https://mbc.cdl.unimi.it/" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">classe</span></h5></td>
+              <td>LM-6</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">descrizioneClasse</span></h5></td>
+              <td>BIOLOGIA</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">descrizioneClasseEng</span></h5></td>
+              <td>Biology</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-success">URLDatiOccupazionali</span></h5></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="http://statistiche.almalaurea.it/universita/statistiche/trasparenza?codicione=0150107300700003">Mostra link</button> <a href="http://statistiche.almalaurea.it/universita/statistiche/trasparenza?codicione=0150107300700003" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- end row 1 -->
+    <!-- END COORTE, CDL, PRESIDENTE-->
+
+    <!-- START ATTIVITA FORMATIVE-->
+    <!-- row 1 -->
+    <div class="row" id="formative" style="display: none;"> 
+      <div class="col-md-12 mb-5">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-danger">premessa</span></h5></td>
+              <td>The Department of Biosciences (DBS) at the Università degli Studi di Milano is the reference point and the main Institution responsible for the MBC Master's Degree course.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>infoAttivitaFormative</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-secondary">obbligoFrequenza</span></h5></td>
+              <td>Course attendance is strongly recommended.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">riconoscimentoCFU</span></h5></td>
+              <td>CFU ACQUIRED IN OTHER MASTER'S\nStudents requesting a transfer from another Master's programme to MBC, will be subject to audit by an ad hoc committee that will decide if and how many of the CFUs previously acquired by the student may be deemed valid upon admittance to MBC. In addition, the Academic Board retains the right to assess the background knowledge of the candidate by interview, or may request partial integration of pertinent exams.\n\n\nCFUs ACQUIRED DURING PROFESSIONAL WORK EXPERIENCE\nA maximum of 9 (extracurricular) CFUs may be acquired (according to art. 5, comma 7, del DM 270/2004) by certified professional work experience and by post-secondary level educational activities performed in association with the University, upon approval by the MBC coordinator.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">svolgimentoStudiEstero</span></h5></td>
+              <td>MBC students are given the opportunity to spend part of their curriculum abroad, at a University within the European Union (EU), in the context of the Erasmus+ program of the European Commission. Students can attend courses and sit exams that can be included in the core curriculum and/or perform their practical thesis in several European Universities localized in North Europe, France, Germany, Ireland, Poland and Iberian Peninsula (see http://eng.dbs.unimi.it/ecm/home/erasmus/outgoing-students/biological-sciences). Most of the Northern European Universities offer courses taught in English.\nThe Erasmus+ call is released each year, usually in February. More information can be found at https://www.unimi.it/en/international/study-abroad/studying-abroad-erasmus.\nAccepted students must present a study plan that reports all the activities he/she intends to perform abroad, detailing the corresponding CFUs; the number of proposed CFUs should approximately correspond to those the student would have achieved over the same time period in his/her university. The proposed Erasmus+ program study plan, must be coherent with the MBC course content and must be evaluated and approved by the Academic Board. If necessary, the Academic Board may request the student to integrate the program of exams taken abroad. In accordance with the rules established by the Academic Senate, following completion of the Erasmus+ program, approved exams will be registered, possibly with the original denomination, as part of the student's curriculum, upon the conversion of the European Credit Transfer and Accumulation System (ECTS) into CFUs.\nIf the student performs the experimental thesis work abroad, he/she must follow the rules outlined above (see Internship criteria and Rules for the thesis and final exam).\nThe Erasmus and international mobility advisor for Biological area is Prof. M. Cristina Bonza (cristina.bonza@unimi.it).</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">svolgimentoStudiEsteroEng</span></h5></td>
+              <td>MBC students are given the opportunity to spend part of their curriculum abroad, at a University within the European Union (EU), in the context of the Erasmus+ program of the European Commission. Students can attend courses and sit exams that can be included in the core curriculum and/or perform their practical thesis in several European Universities localized in North Europe, France, Germany, Ireland, Poland and Iberian Peninsula (see http://eng.dbs.unimi.it/ecm/home/erasmus/outgoing-students/biological-sciences). Most of the Northern European Universities offer courses taught in English.\nThe Erasmus+ call is released each year, usually in February. More information can be found at https://www.unimi.it/en/international/study-abroad/studying-abroad-erasmus.\nAccepted students must present a study plan that reports all the activities he/she intends to perform abroad, detailing the corresponding CFUs; the number of proposed CFUs should approximately correspond to those the student would have achieved over the same time period in his/her university. The proposed Erasmus+ program study plan, must be coherent with the MBC course content and must be evaluated and approved by the Academic Board. If necessary, the Academic Board may request the student to integrate the program of exams taken abroad. In accordance with the rules established by the Academic Senate, following completion of the Erasmus+ program, approved exams will be registered, possibly with the original denomination, as part of the student's curriculum, upon the conversion of the European Credit Transfer and Accumulation System (ECTS) into CFUs.\nIf the student performs the experimental thesis work abroad, he/she must follow the rules outlined above (see Internship criteria and Rules for the thesis and final exam).\nThe Erasmus and international mobility advisor for Biological area is Prof. M. Cristina Bonza (cristina.bonza@unimi.it).</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">propedeuticita</span></h5></td>
+              <td>There are no propaedeutic courses in the MBC programme that limit progression from the first to the second year.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">propedeuticitaEng</span></h5></td>
+              <td>There are no propaedeutic courses in the MBC programme that limit progression from the first to the second year.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- end row 1 -->
+    <!-- END ATTIVITA FORMATIVE-->
+
+    <!-- START LINGUE, STRUTTURA E INDIRIZZI-->
+    <!-- row 1 -->
+    <div class="col-md-12 mb-5"  id="lingue1" style="display: none;">
+      <h3>Struttura*</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><h5><span class="badge badge-success">strutturaCorso</span></h5></td>
+            <td>The MBC Master's has a duration of two years, each year is subdivided into two semesters.\n120 educational credits (CFU) are required for Master completion. Each credit corresponds to a standard student workload of 25 hours, including:\n- 8 hours of lectures followed by 17 hours of individual study;\n- 16 hours of practical labs followed by 9 hours of individual study;\n- 25 hours of training activities related to the thesis internship.\n\nThe curriculum includes mandatory, guided-and elective courses. Subject choices are made as follows:\n· 7 mandatory courses (45 CFUs in total);\n· 3 guided-choice courses on principal subjects (18 CFUs in total);\n· 2 elective courses (12 CFUs in total), which may be freely selected by the student from all the courses offered by the University (including the MBC courses in the guided-choice list, which have not already been selected), provided that they are coherent with the study plan. If unavailable in English, elective courses may be taken in Italian if the student is proficient in the Italian language.\n\nDuring the first year (I and II semesters), students are encouraged to acquire credits by following at least 8 distinct courses. 3 CFUs will be assigned for English language skills.\nThe second year will center around the experimental research activities related to the thesis consisting of 12 CFUs of initial laboratory training and 30 CFUs related to the final thesis exam.</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">strutturaCorsoEng</span></h5></td>
+            <td>The MBC Master's has a duration of two years, each year is subdivided into two semesters.\n120 educational credits (CFU) are required for Master completion. Each credit corresponds to a standard student workload of 25 hours, including:\n- 8 hours of lectures followed by 17 hours of individual study;\n- 16 hours of practical labs followed by 9 hours of individual study;\n- 25 hours of training activities related to the thesis internship.\n\nThe curriculum includes mandatory, guided-and elective courses. Subject choices are made as follows:\n· 7 mandatory courses (45 CFUs in total);\n· 3 guided-choice courses on principal subjects (18 CFUs in total);\n· 2 elective courses (12 CFUs in total), which may be freely selected by the student from all the courses offered by the University (including the MBC courses in the guided-choice list, which have not already been selected), provided that they are coherent with the study plan. If unavailable in English, elective courses may be taken in Italian if the student is proficient in the Italian language.\n\nDuring the first year (I and II semesters), students are encouraged to acquire credits by following at least 8 distinct courses. 3 CFUs will be assigned for English language skills.\nThe second year will center around the experimental research activities related to the thesis consisting of 12 CFUs of initial laboratory training and 30 CFUs related to the final thesis exam.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end row 1 -->
+    <!-- row 2 -->
+    <div class="row" id="lingue2" style="display: none;"> 
+      <div class="col-md-6 mb-5">
+        <h3>indirizziUtili</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">descrizione</span></h5></td>
+              <td>Student registrar</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">descrizioneEng</span></h5></td>
+              <td>Student registrar</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">indirizzo</span></h5></td>
+              <td>Address: via Celoria, 18, 20133 Milan.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">sito</span></h5></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="http://www.unimi.it/en/study/student-services/welcome-desk-infostudenti">Mostra link</button> <a href="http://www.unimi.it/en/study/student-services/welcome-desk-infostudenti" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">telefono</span></h5></td>
+              <td>Phone: (+39) 199.188.128/ From abroad: (+39) 056676357.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">orario</span></h5></td>
+              <td>For information on taxes, enrollment procedures and related administrative issues. \nContacts and office opening hours see:</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">descrizione</span></h5></td>
+              <td>Student registrar</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">descrizioneEng</span></h5></td>
+              <td>Student registrar</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">indirizzo</span></h5></td>
+              <td>Address: via Celoria, 18, 20133 Milan.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">sito</span></h5></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="http://www.unimi.it/en/study/student-services/welcome-desk-infostudenti">Mostra link</button> <a href="http://www.unimi.it/en/study/student-services/welcome-desk-infostudenti" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">telefono</span></h5></td>
+              <td>Phone: (+39) 199.188.128/ From abroad: (+39) 056676357.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">orario</span></h5></td>
+              <td>For information on taxes, enrollment procedures and related administrative issues. \nContacts and office opening hours see:</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">descrizione</span></h5></td>
+              <td>Student registrar</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">descrizioneEng</span></h5></td>
+              <td>Student registrar</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">indirizzo</span></h5></td>
+              <td>Address: via Celoria, 18, 20133 Milan.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">sito</span></h5></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="http://www.unimi.it/en/study/student-services/welcome-desk-infostudenti">Mostra link</button> <a href="http://www.unimi.it/en/study/student-services/welcome-desk-infostudenti" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">telefono</span></h5></td>
+              <td>Phone: (+39) 199.188.128/ From abroad: (+39) 056676357.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">orario</span></h5></td>
+              <td>For information on taxes, enrollment procedures and related administrative issues. \nContacts and office opening hours see:</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">descrizione</span></h5></td>
+              <td>Student registrar</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">descrizioneEng</span></h5></td>
+              <td>Student registrar</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">indirizzo</span></h5></td>
+              <td>Address: via Celoria, 18, 20133 Milan.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">sito</span></h5></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="http://www.unimi.it/en/study/student-services/welcome-desk-infostudenti">Mostra link</button> <a href="http://www.unimi.it/en/study/student-services/welcome-desk-infostudenti" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">telefono</span></h5></td>
+              <td>Phone: (+39) 199.188.128/ From abroad: (+39) 056676357.</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">orario</span></h5></td>
+              <td>For information on taxes, enrollment procedures and related administrative issues. \nContacts and office opening hours see:</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">poloFisico</span></h5></td>
+              <td>Milano</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-info">poloFisicoEng</span></h5></td>
+              <td>Milano</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6 mb-5">
+        <h3>offertaLingue</h3>
+         <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-secondary">tipo</span></h5></td>
+              <td>M</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h4>lingue</h4></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">codice</span></h5></td>
+              <td>eng</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">linguaManifesto</span></h5></td>
+              <td>Y</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">codice</span></h5></td>
+              <td>ita</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">linguaManifesto</span></h5></td>
+              <td>N</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- end row 2 -->
+    <!-- END LINGUE, STRUTTURA E INDIRIZZI-->
+
+    <!-- START IMMATRICOLAZIONE-->
+    <!-- row 1 -->
+    <div class="row" id="immatricolazione1" style="display: none;"> 
+      <div class="col-md-6 mb-5">
+        <h3>modalitaAccesso</h3>
+         <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-secondary">modalita</span></h5></td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">anno</span></h5></td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">infoImmatricolazione</span></h5></td>
+              <td>APPLICATION FORM\nBoth Italian and foreign students must submit admission applications by the deadlines indicated in the \"student area\" of the University web portal (https://www.unimi.it/en/node/92/). Those students who have already graduated before the application deadline (28th August  2020) must matriculate by 30th September 2020. Students who will graduate between 28th August and 31st December 2020 must matriculate by the 15th January 2021. The application form must be completed and electronically submitted to the above mentioned address.\n\nBACKGROUND KNOWLEDGE\nThe prerequisite to enter the MBC Master's Degree program is an adequate knowledge of the fundaments of biological disciplines as certified by the possession of the required CFUs as described in paragraph \"Pre-requisites for admission\". Knowledge will be verified by: 1) evaluation of the bachelor study program and 2) an interview with the Admission Committee, composed of teaching members appointed by the Academic Board. The interview will evaluate the expertise of the candidate in topics related to the MBC degree, and will ascertain proficiency in the English language. \nThe committee will evaluate the candidate on a 100-point scale and award:\n- 25/100 points for the graduation grade;\n-10/100 points for the curriculum vitae (degrees with higher number of CFUs in biology related disciplines will obtain more points; the same applies to the presence of extra elective courses, Erasmus experience, others,...)\n- 65/100 for interview performance\nThe minimum requirement for admission is 60/100 and an adequate English proficiency level (equivalent to B1 level). \n\nFor the academic Year 2020-2021, applicant interviews will be held, for those who submit their application by the deadline (see above, \"Application Form\"), at the Department of Biosciences, Via Celoria 26, room 2A, on the following days:\n- 17th September 2020 at 14.30, for graduated students;\n- 6th November 2020 at 14.30 for students that graduate in September and October;\n- 12th January 2021, at 14.30, for students that graduate in December. Students must bring official proof of their identity (identity card or passport).\nUpon graduation, students not from University of Milan, must present certification of their awarded degree to the Administrative Office or email via www.unimi.infostudente.it.\nForeign students who are not resident in Italy and who possess a foreign bachelor's degree title, will be invited to an online interview. Foreign students who reside in Italy are classed as Italian citizens and must undergo the same evaluation. Check for updates on interview dates and times on the website: https://mbc.cdl.unimi.it</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">istruzioniOperative</span></h5></td>
+              <td>MBC COURSE ENROLLMENT\nOnly graduates who have successfully passed the entrance interview may enroll in the MBC course.\nRegistration will open 5 working days after the interview, according to the terms and conditions indicated at https://www.unimi.it/en/node/92/\nStudents from the Università degli Studi di Milano that have acquired extra CFUs during their bachelor's degree by passing MBC exams, may request that such credits count towards the 120 CFUs required for MBC graduation.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">modalita</span></h5></td>
+              <td>L</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">anno</span></h5></td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">modalita</span></h5></td>
+              <td>L</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">anno</span></h5></td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6 mb-5">
+        <h3>Docenti e obiezione*</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-warning">docentiTutor</span></h5></td>
+              <td>Academic advisors- Katia Petroni and Saverio Minucci\nErasmus and International Mobility coordinator- Cristina Bonza\nStudy plan advisor- Monica Beltrame\nInternship coordinator- Lucio Conti\nThesis coordinator- Luisa Guerrini\nMaster's Degree admission advisor- Luisa Guerrini\nCredit Recognition advisor- Luisa Guerrini</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-warning">obiezioneCoscienza</span></h5></td>
+              <td>During the MBC Master's, the use of animals for teaching purposes is forbidden, according to law: art. 5f of the Legislative Decree 26/2014. Such procedures are allowed during the traineeships for thesis preparation. However, they must be carried out exclusively by authorized staff, to whom the Legislative Decree 26/2014 does not apply. According to Italian law n. 413, October 12 1993, \"Norme sull'obiezione di coscienza alla sperimentazione animale\", students have the uncontestable right to conscientiously object to their participation in any animal experimentation. In this case, the Teaching Board will suggest alternative traineeships, that are consistent with the educational goals of MBC, to ensure the correct acquisition of the study credits necessary to graduate.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- end row 1 -->
+    <!-- row 2 -->
+    <div class="row" id="immatricolazione2" style="display: none;"> 
+    <div class="col-md-6 mb-5">
+      <h3>bando</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><h5><span class="badge badge-success">dataPubblicazioneTestCenterEng</span></h5></td>
+            <td>null</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataFineImmatricolazioneString</span></h5></td>
+            <td>30/09/2020</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataFineImmatricolazioneEngString</span></h5></td>
+            <td>09-30-2020</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataInizioImmatricolazioneString</span></h5></td>
+            <td>25/05/2020</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataInizioImmatricolazioneEngString</span></h5></td>
+            <td>05-25-2020</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataInizioAmmissioneString</span></h5></td>
+            <td>10/03/2020</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataInizioAmmissioneEngString</span></h5></td>
+            <td>03-10-2020</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataFineAmmissioneString</span></h5></td>
+            <td>28/08/2020</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataFineAmmissioneEngString</span></h5></td>
+            <td>08-28-2020</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataProvaAmmissioneString</span></h5></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataProvaAmmissioneEngString</span></h5></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">sessione</span></h5></td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataInizioAmmissione</span></h5></td>
+            <td>2020-03-10T08:00:00.000Z</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataFineAmmissione</span></h5></td>
+            <td>2020-08-28T21:59:00.000Z</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataInizioImmatricolazione</span></h5></td>
+            <td>2020-06-17T12:00:00.000Z</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">dataFineImmatricolazione</span></h5></td>
+            <td>2020-09-30T12:00:00.000Z</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-success">haBando</span></h5></td>
+            <td>false</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6 mb-5">
+      <h3>bandoTesto</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><h5><span class="badge badge-primary">infoIta</span></h5></td>
+            <td>\n**Presentazione domanda di ammissione:** 10/03/2020 al 28/08/2020\n**Presentazione domanda di immatricolazione:** dal 17/06/2020 al 30/09/2020\n</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-primary">infoEng</span></h5></td>
+            <td>\n**Application period:** from 03-10-2020 to 08-28-2020\n**Enrolment period:** from 06-17-2020 to 09-30-2020\n</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><h5><span class="badge badge-primary">immatricolazioniAperte</span></h5></td>
+            <td>false</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <!-- end row 2-->
+    <!-- END IMMATRICOLAZIONE-->
+
+    <!-- START MANIFESTO, RISORSE, ORARI, NOTE-->
+    <!-- row 1 -->
+    <div class="row" id="manifesto1" style="display: none;"> 
+      <div class="col-md-6 mb-5">
+        <h3>manifesto</h3>
+         <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-secondary">pdfItaURL</span></h5></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="https://apps.unimi.it/files/manifesti/ita_manifesto_F9Yof1_2021.pdf">Mostra link</button> <a href="https://apps.unimi.it/files/manifesti/ita_manifesto_F9Yof1_2021.pdf" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">pdfEngURL</span></h5></td>
+              <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="https://apps.unimi.it/files/manifesti/eng_manifesto_F9Yof1_2021.pdf">Mostra link</button> <a href="https://apps.unimi.it/files/manifesti/eng_manifesto_F9Yof1_2021.pdf" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+            </tr>
+          </tbody>
+         </table>
+      </div>
+      <div class="col-md-6 mb-5">
+        <h3>risorse</h3>
+        <table class="table">
+         <tbody>
+           <tr>
+             <td><h5><span class="badge badge-info">didattica</span></h5></td>
+             <td>Classrooms are located in the University buildings in: Via Celoria, 26 (Biology buildings); Via Celoria, 20 (Teaching Sector); Via Golgi, 19. Most laboratories are located in the Department of Biosciences, Via Celoria 26, 20133 Milano.</td>
+           </tr>
+           <tr>
+             <td><h5><span class="badge badge-info">biblioteche</span></h5></td>
+             <td>The Biology, Chemistry, Physics and IT library is located in Via Celoria, 18, Milano. See: http://www.sba.unimi.it/en/libraries/13453.html</td>
+           </tr>
+         </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- end row 1 -->
+    <!-- row 2 -->
+    <div class="row" id="manifesto2" style="display: none;"> 
+    <div class="col-md-6 mb-5">
+      <h3>orarioLezioni</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><h5><span class="badge badge-warning">itaURL</span></h5></td>
+            <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="https://orari.unimi.it/PortaleStudenti/index.php?view=easycourse&include=corso&anno=2020&cdl=F9Y&_lang=it">Mostra link</button> <a href="https://orari.unimi.it/PortaleStudenti/index.php?view=easycourse&include=corso&anno=2020&cdl=F9Y&_lang=it" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-warning">engURL</span></h5></td>
+            <td ><button type="button" class="btn btn-sm btn-primary" data-toggle="popover" data-content="https://orari.unimi.it/PortaleStudenti/index.php?view=easycourse&include=corso&anno=2020&cdl=F9Y&_lang=en">Mostra link</button> <a href="https://orari.unimi.it/PortaleStudenti/index.php?view=easycourse&include=corso&anno=2020&cdl=F9Y&_lang=en" class="btn btn-sm  btn-secondary">Apri collegamento</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6 mb-5">
+      <h3>Note*</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td><h5><span class="badge badge-primary">noteIta</span></h5></td>
+            <td>lorem ipsum</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-primary">noteEng</span></h5></td>
+            <td>lorem ipsum</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <!-- end row 2-->
+    <!-- END MANIFESTO, RISORSE, ORARI, NOTE-->
+
+    <!-- START RUOLI-->
+    <!-- row 1 -->
+    <div class="row" id="ruoli1" style="display: none;"> 
+      <div class="col-md-6 mb-5">
+        <h3>ruoloStrutture</h3>
+         <table class="table">
+          <tbody>
+            <tr>
+              <td><h5><span class="badge badge-secondary">codice</span></h5></td>
+              <td>6580</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">tipo</span></h5></td>
+              <td>DIP</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">descrizione</span></h5></td>
+              <td>Dipartimento di Bioscienze</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">ruolo</span></h5></td>
+              <td>PRINCIPALE</td>
+            </tr>
+            <tr>
+              <td><h5><span class="badge badge-secondary">descrizioneRuolo</span></h5></td>
+              <td>Referente Principale</td>
+            </tr>
+          </tbody>
+         </table>
+      </div>
+      <div class="col-md-6 mb-5">
+        <h3>funzionePersone</h3>
+        <table class="table">
+         <tbody>
+          <tr>
+            <td><h5><span class="badge badge-info">codiceUO</span></h5></td>
+            <td>6976</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-info">descrizione</span></h5></td>
+            <td>PRESIDENTE DEL COLLEGIO DIDATTICO</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-info">codiceFunzione</span></h5></td>
+            <td>NFUZ67</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <h4>persona</h4>
+          <tr>
+            <td><h5><span class="badge badge-info">matricola</span></h5></td>
+            <td>15239</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-info">nome</span></h5></td>
+            <td>MIRKO</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-info">cognome</span></h5></td>
+            <td>BARUSCOTTI</td>
+          </tr>
+          <tr>
+            <td><h5><span class="badge badge-info">email</span></h5></td>
+            <td>mirko.baruscotti@unimi.it</td>
+          </tr>
+         </tbody>
+        </table>
+        <table class="table">
+          <tbody>
+           <tr>
+             <td><h5><span class="badge badge-info">codiceUO</span></h5></td>
+             <td>170015</td>
+           </tr>
+           <tr>
+             <td><h5><span class="badge badge-info">descrizione</span></h5></td>
+             <td>Referente AQ del corso di studio</td>
+           </tr>
+           <tr>
+             <td><h5><span class="badge badge-info">codiceFunzione</span></h5></td>
+             <td>NO0013</td>
+           </tr>
+           <tr>
+             <td></td>
+             <td></td>
+           </tr>
+           <h4>persona</h4>
+           <tr>
+             <td><h5><span class="badge badge-info">matricola</span></h5></td>
+             <td>10162</td>
+           </tr>
+           <tr>
+             <td><h5><span class="badge badge-info">nome</span></h5></td>
+             <td>CHIARA</td>
+           </tr>
+           <tr>
+             <td><h5><span class="badge badge-info">cognome</span></h5></td>
+             <td>TONELLI</td>
+           </tr>
+           <tr>
+             <td><h5><span class="badge badge-info">email</span></h5></td>
+             <td>chiara.tonelli@unimi.it</td>
+           </tr>
+          </tbody>
+         </table>
+      </div>
+    </div>
+    <!-- end row 1 -->
+    <!-- row 2 -->
+    <div class="row" id="ruoli2" style="display: none;"> 
+      <div class="col-md-12 mb-5">
+        <h3>ruoloPersone</h3>
+      </div>
+    <div class="col-md-4 mb-5">
+      <table class="table">
+        <tbody>
+         <tr>
+           <td><h5><span class="badge badge-success">codice</span></h5></td>
+           <td>23</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">tipo</span></h5></td>
+           <td>Tutor per tesi di laurea</td>
+         </tr>
+         <tr>
+           <td></td>
+           <td></td>
+         </tr>
+         <h4>persona</h4>
+         <tr>
+           <td><h5><span class="badge badge-success">matricola</span></h5></td>
+           <td>15791</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">nome</span></h5></td>
+           <td>DAVID STEPHEN</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">cognome</span></h5></td>
+           <td>HORNER</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div class="col-md-4 mb-5">
+       <table class="table">
+        <tbody>
+         <tr>
+           <td><h5><span class="badge badge-success">codice</span></h5></td>
+           <td>23</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">tipo</span></h5></td>
+           <td>Tutor per tesi di laurea</td>
+         </tr>
+         <tr>
+           <td></td>
+           <td></td>
+         </tr>
+         <h4>persona</h4>
+         <tr>
+           <td><h5><span class="badge badge-success">matricola</span></h5></td>
+           <td>15791</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">nome</span></h5></td>
+           <td>DAVID STEPHEN</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">cognome</span></h5></td>
+           <td>HORNER</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div class="col-md-4 mb-5">
+       <table class="table">
+        <tbody>
+         <tr>
+           <td><h5><span class="badge badge-success">codice</span></h5></td>
+           <td>23</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">tipo</span></h5></td>
+           <td>Tutor per tesi di laurea</td>
+         </tr>
+         <tr>
+           <td></td>
+           <td></td>
+         </tr>
+         <h4>persona</h4>
+         <tr>
+           <td><h5><span class="badge badge-success">matricola</span></h5></td>
+           <td>15791</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">nome</span></h5></td>
+           <td>DAVID STEPHEN</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">cognome</span></h5></td>
+           <td>HORNER</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div class="col-md-4 mb-5">
+       <table class="table">
+        <tbody>
+         <tr>
+           <td><h5><span class="badge badge-success">codice</span></h5></td>
+           <td>23</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">tipo</span></h5></td>
+           <td>Tutor per tesi di laurea</td>
+         </tr>
+         <tr>
+           <td></td>
+           <td></td>
+         </tr>
+         <h4>persona</h4>
+         <tr>
+           <td><h5><span class="badge badge-success">matricola</span></h5></td>
+           <td>15791</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">nome</span></h5></td>
+           <td>DAVID STEPHEN</td>
+         </tr>
+         <tr>
+           <td><h5><span class="badge badge-success">cognome</span></h5></td>
+           <td>HORNER</td>
+         </tr>
+        </tbody>
+       </table>
+    </div>
+    </div>
+    <!-- end row 2-->
+    <!-- END RUOLI-->
+
+    <!-- START RAW DATA-->
+    <!-- row 1 -->
+    <div class="row" id="rawData"  style="display: none;">
+      <div class="input-group col-md-12 mb-5">
+        <div class="input-group-prepend">
+          <span class="input-group-text"></span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea" rows="100">
+          {
+            "payLoad": {
+            "struttureAmministrative": [
+            {
+            "codice": "E",
+            "tipo": "FAC",
+            "descrizione": "SCIENZE DEL FARMACO",
+            "descrizioneEng": "Pharmacy"
+            },
+            {
+            "codice": "E*02",
+            "tipo": "CCD",
+            "descrizione": "FARMACIA"
+            }
+            ],
+            "_relatedLinks": {
+            "links": [
+            {
+            "rel": "insegnamenti",
+            "href": "https://apps.unimi.it/ws/offertadidattica/offertaFormativa/2020/E24of1/insegnamenti?afCompleta=true"
+            }
+            ]
+            },
+            "annoAccademico": 2020,
+            "codice": "E24of1",
+            "descrizione": "Farmacia a ciclo unico (Classe LM-13)-immatricolati dall'a.a. 2009/10",
+            "descrizioneEng": "Pharmacy (Classe LM-13)-enrolled from 2009/10 academic year",
+            "descrizioneCoorte": "immatricolati dall'A.A. 2009/10",
+            "descrizioneCoorteEng": "enrolled from 2009/10 academic year",
+            "tipoCorso": {
+            "codice": "CDLMAGCU",
+            "codiceSegreterie": "H",
+            "descrizione": "CDS MAGISTRALE A CICLO UNICO",
+            "descrizioneEng": "Single-Cycle Degree Programmes"
+            },
+            "curricula": [
+            {
+            "codice": "E24-0",
+            "obiettiviFormativi": "Il corso di laurea magistrale in Farmacia si propone di conferire un insieme di conoscenze teoriche e pratiche in campo biologico, chimico, farmaceutico, tecnologico, fisiopatologico, farmacologico e tossicologico, che permettano ai laureati di affrontare l'intera sequenza del complesso processo multidisciplinare che dalla progettazione strutturale porta alla produzione, commercializzazione e ad un corretto utilizzo e controllo del farmaco, secondo le norme codificate. Fornisce inoltre una preparazione scientifica avanzata in campo sanitario mirata a formare una figura professionale di esperto del farmaco e del suo uso a fini terapeutici, in grado di costituire un fondamentale elemento di connessione fra paziente, medico e strutture della sanità pubblica, collaborando al monitoraggio del farmaco sul territorio, alla attuazione della terapia in ambito sia territoriale che ospedaliero e fornendo al paziente e allo stesso medico quelle indicazioni essenziali al corretto utilizzo dei farmaci. I laureati nel corso di laurea magistrale in Farmacia saranno quindi  dotati delle basi scientifiche e della preparazione teorica e pratica necessarie all'esercizio della professione di farmacista e ad operare quali esperti del farmaco e dei prodotti per la salute (dispositivi medici, presidi medico-chirurgici, cosmetici, dietetici, integratori alimentari, prodotti erboristici, diagnostici in vitro).",
+            "obiettiviFormativiEng": "Inserire traduzione",
+            "notePerEng": "In order to get their degree, students are required to certify their knowledge of the English language at the B2 level. This level can be certified in one of the following ways:\n\n·         By submitting their language certificate, taken no more than 3\nyears before its submittal and attesting a B2 o higher level (for the list of the language certificates which are accepted by the University of Milan, please refer to the website: http://www.unimi.it/studenti/100312.htm).\nStudents can submit their language certificate during the immatriculation procedure or send it to the Language Centre of the University of Milan\n(SLAM) via the Infostudente service. \n\n·         By sitting the placement test run by SLAM, during the first year\nexclusively, from September to December. Should they not pass the Placement Test, students will have to attend the English language course organized by SLAM. All students who do not have a valid language certificate must sit the Placement Test. Those students who do not sit the Placement test by December or do not pass the end of course test in one of the 6 attempts granted will have to get a language certificate outside the University of Milan within their degree.",
+            "sbocchiProfessionali": "Il profilo professionale di farmacista è quello di un operatore sanitario che nell'ambito delle sue competenze scientifiche e tecnologiche multidisciplinari contribuisce al raggiungimento degli obiettivi posti dal Servizio Sanitario Nazionale, per rispondere adeguatamente alle mutevoli esigenze della società in campo sanitario.\nCon il conseguimento della laurea magistrale della relativa abilitazione professionale, essi svolgeranno, ai sensi della direttiva 2005/36/CE, la professione di farmacista e saranno autorizzati almeno all'esercizio delle seguenti attività professionali:\n- preparazione della forma farmaceutica dei medicinali;\n- fabbricazione e controllo dei medicinali;\n- controllo dei medicinali in laboratorio di controllo;\n- immagazzinamento, conservazione e distribuzione dei medicinali nella fase di commercio all'ingrosso;\n- preparazione, controllo, immagazzinamento e distribuzione dei medicinali nelle farmacie aperte al pubblico;\n- preparazione, controllo, immagazzinamento e distribuzione dei medicinali negli ospedali (farmacie ospedaliere);\n- diffusione di informazioni e consigli nel settore dell'utilizzo dei medicinali.    \nTali attività rientrano nel campo minimo comune coordinato da detta direttiva; il percorso formativo potrà considerare anche altre attività professionali svolte nell'Unione Europea nel campo del farmaco al fine di consentire pari opportunità occupazionali in ambito europeo.",
+            "sbocchiProfessionaliEng": "Inserire traduzione",
+            "competenzeAcquisite": "Per raggiungere tali obiettivi formativi il corso di laurea magistrale a ciclo unico in Farmacia intende fornire ai propri laureati:\n1) una solida preparazione nelle discipline delle scienze di base (fisiche, chimiche, biologiche, mediche) con lo scopo di acquisire familiarità con l'approccio scientifico alla soluzione dei problemi inerenti la professione;\n2) una conoscenza approfondita della composizione, delle caratteristiche tecnologiche, dell'efficacia terapeutica, delle controindicazioni, dei modi d'impiego, delle normative e di ogni altra indicazione relativamente ai medicinali;\n3) la capacità di applicare le conoscenze scientifiche acquisite (chimiche, biologiche, farmaceutiche, farmacologiche, tossicologiche, tecnologiche, legislative e deontologiche) nel dosaggio dei farmaci, nel riconoscimento dei farmaci con saggi di purezza, e nella preparazione di medicinali galenici; \n4) adeguate conoscenze di biochimica, fisiopatologia e nutrizione per potere fornire un valido supporto nelle attività terapeutiche proposte dal medico favorendo la compliance e quindi il risultato terapeutico;\n5) adeguate conoscenze nel settore della farmaco-epidemiologia e della farmacovigilanza, aspetti sempre più richiesti per un corretto uso dei farmaci nella popolazione;\n6) la conoscenza dei contesti legislativi e delle proprie responsabilità professionali ed etiche necessarie per intraprendere in piena autonomia la professione;\n7) le conoscenze e la capacità di apprendimento necessarie per affrontare i corsi di perfezionamento e le Scuole di specializzazione della Classe dell'Area Farmaceutica e Farmacologica.\nA tal fine il corso di studio approfondisce in maniera particolare le discipline chimiche (chimica generale e inorganica, chimica organica), biochimiche, tecnico- e chimico-farmaceutiche, farmacologiche e dà anche risalto alle attività pratiche di laboratorio. Altri settori approfonditi riguardano, sia per i medicinali che per i prodotti salutari, gli aspetti relativi alla stabilità, tossicità, formulazione, ricerca e sviluppo, e informazione. I laureati in Farmacia devono inoltre aver acquisito conoscenze multidisciplinari fondamentali per la comprensione del principio attivo, della sua struttura ed attività in rapporto alla interazione con le biomolecole a livello cellulare e sistemico.",
+            "competenzeAcquisiteEng": "Inserire traduzione",
+            "default": "Y",
+            "requisitiAccesso": "Per essere ammessi al corso di laurea occorre essere in possesso di un diploma di scuola secondaria superiore o di altro titolo di studio conseguito all'estero e riconosciuto idoneo. E' previsto un test on-line di valutazione selettivo con limitazione numerica. Sono richieste conoscenze di biologia, chimica, matematica, fisica e logica facenti parte dei programmi ministeriali della scuola superiore.",
+            "requisitiAccessoEng": "Per essere ammessi al corso di laurea occorre essere in possesso di un diploma di scuola secondaria superiore o di altro titolo di studio conseguito all'estero e riconosciuto idoneo. E' previsto un test on-line di valutazione selettivo con limitazione numerica. Sono richieste conoscenze di biologia, chimica, matematica, fisica e logica facenti parte dei programmi ministeriali della scuola superiore.",
+            "anniCorsoAttivati": [
+            1,
+            2,
+            3,
+            4,
+            5
+            ],
+            "anniCorso": [
+            {
+            "anno": 1,
+            "attivo": true
+            },
+            {
+            "anno": 2,
+            "attivo": true
+            },
+            {
+            "anno": 3,
+            "attivo": true
+            },
+            {
+            "anno": 4,
+            "attivo": true
+            },
+            {
+            "anno": 5,
+            "attivo": true
+            }
+            ],
+            "regoleComposizione": [
+            {
+            "cfuMin": 0,
+            "cfuMax": 0,
+            "afoMin": 0,
+            "afoMax": 0,
+            "note": "Nel IV anno lo studente dovrà frequentare un insegnamento opzionale di 8 CFU costituito da due moduli di 4 CFU. Non è possibile optare per due moduli di corsi opzionali diversi. \nIn base a modalità che di anno in anno verranno comunicate sul sito di Scienze del Farmaco, nel periodo giugno-luglio, lo studente iscritto al terzo anno di corso, potrà esprimere la propria scelta per uno dei corsi di seguito riportati(pari a 8 CFU).\nGli insegnamenti verranno attivati se scelti da almeno 15 studenti.\nLa valutazione degli insegnamenti a scelta verrà effettuata con votazione espressa in trentesimi. \nGli studenti sono pregati di verificare le propedeuticità relative agli insegnamenti a scelta nella tabella delle propedeuticità.\nA partire dall'AA 2017-18, qualora decidesse di svolgere una tesi sperimentale, lo studente potrà conseguire gli 8 CFU optando per l'attività a scelta \"Laboratorio sperimentale\". Tale opzione non è obbligatoria.\n",
+            "noteEng": "Nel IV anno lo studente dovrà frequentare un insegnamento opzionale di 8 CFU costituito da due moduli di 4 CFU. Non è possibile optare per due moduli di corsi opzionali diversi. \nIn base a modalità che di anno in anno verranno comunicate sul sito di Scienze del Farmaco, nel periodo giugno-luglio, lo studente iscritto al terzo anno di corso, potrà esprimere la propria scelta per uno dei corsi di seguito riportati(pari a 8 CFU).\nGli insegnamenti verranno attivati se scelti da almeno 15 studenti.\nLa valutazione degli insegnamenti a scelta verrà effettuata con votazione espressa in trentesimi. \nGli studenti sono pregati di verificare le propedeuticità relative agli insegnamenti a scelta nella tabella delle propedeuticità.\nA partire dall'AA 2017-18, qualora decidesse di svolgere una tesi sperimentale, lo studente potrà conseguire gli 8 CFU optando per l'attività a scelta \"Laboratorio sperimentale\". Tale opzione non è obbligatoria.\n",
+            "riferimento": "1",
+            "riferimentoEng": "1",
+            "annoCorso": 4,
+            "insegnamenti": [
+            {
+            "codice": "E24-35",
+            "descrizione": "Ormoni/fitormoni e Patologie metaboliche",
+            "descrizioneEng": "Metabolic diseases"
+            },
+            {
+            "codice": "E24-36",
+            "descrizione": "Sviluppo e Comunicazione scientifica del farmaco",
+            "descrizioneEng": "Drug development and scientific communication"
+            },
+            {
+            "codice": "E24-37",
+            "descrizione": "Fitofarmacia",
+            "descrizioneEng": "PHYTOPHARMACY"
+            },
+            {
+            "codice": "E24-39",
+            "descrizione": "Sostanze organiche naturali: biosintesi e caratterizzazione",
+            "descrizioneEng": "Organic natural products: biosynthesis and characterization"
+            },
+            {
+            "codice": "E24-45",
+            "descrizione": "Mercato farmaceutico e normativa dei prodotti salutari",
+            "descrizioneEng": "Pharmaceutical market and Regulatory aspects of health products"
+            },
+            {
+            "codice": "E24-49",
+            "descrizione": "Laboratorio sperimentale",
+            "descrizioneEng": "Experimental laboratory"
+            }
+            ]
+            }
+            ]
+            }
+            ],
+            "coorte": {
+            "inizioValidita": 2010,
+            "fineValidita": 2020
+            },
+            "annoInizio": 2009,
+            "corsoDiStudio": {
+            "codice": "E24",
+            "tipo": "CDS",
+            "descrizione": "Farmacia a ciclo unico (Classe LM-13)",
+            "descrizioneEng": "Pharmacy (Classe LM-13)",
+            "sito": "https://farmacia.cdl.unimi.it/it",
+            "classe": "LM-13",
+            "descrizioneClasse": "FARMACIA E FARMACIA INDUSTRIALE",
+            "descrizioneClasseEng": "Pharmacy and industrial pharmacy",
+            "URLDatiOccupazionali": "http://statistiche.almalaurea.it/universita/statistiche/trasparenza?codicione=0150107301400014"
+            },
+            "presidenteCollegio": "MARCO ANDREA RIVA",
+            "presidenteCollegioInterdipartimentale": "Prof. Marco Riva",
+            "premessa": "Il Corso di Laurea magistrale in Farmacia appartiene alla classe delle lauree LM/13, Farmacia e farmacia industriale, e ai sensi della direttiva CEE 2005/36/CE, permette al laureato, dopo l'acquisizione dell'abilitazione professionale, di svolgere la professione di farmacista e di operare quale esperto del farmaco e dei prodotti per la salute.",
+            "infoAttivitaFormative": {
+            "obbligoFrequenza": "Sono obbligatorie le frequenze ai corsi di laboratorio. La frequenza alle lezioni è caldamente consigliata.",
+            "svolgimentoStudiEstero": "Grazie a programmi di mobilità quali Erasmus+, Erasmus+Placement, e Erasmus Mundus, il CdS in Farmacia offre ai propri studenti la possibilità di trascorrere periodi di formazione all'estero. Il Programma Erasmus Placement, inoltre, offre la possibilità di svolgere un tirocinio formativo all'estero presso imprese, altre organizzazioni o università.\nLe Università e gli Enti partners coinvolti in tali programmi risiedono principalmente in Europa e nelle regioni balcaniche.\nLe Sedi con le quali sono stati stabiliti Agreement offrono la possibilità di svolgere attività in un ampio ventaglio di ambiti. Nel periodo di mobilità lo studente può:\n-\tproseguire gli studi frequentando corsi e sostenendo i relativi esami;\n-\tsvolgere la tesi di laurea;\n-\tsvolgere il tirocinio in Farmacia Ospedaliera.\nOgni studente è seguito da un docente tutor individuato all'interno del Corso di Studio.\nAlla pagina http://www.farmacia.unimi.it/CorsiDiLaurea/4017_ITA_HTML.html sono riportate tutte le informazioni relative agli ambiti di studio e alle possibilità formative offerte dalle singole Sedi ospitanti.\nProcedura per il riconoscimento dei periodi di studio all'estero: ciascuno studente deve proporre un Learning Agreement riguardante attività formative che portino al riconoscimento di un numero di CFU adeguati al periodo di permanenza all'estero e precisamente:\n-\t60 CFU per un anno accademico;\n-\t30 CFU per un semestre accademico;\n-\t20 CFU per un trimestre accademico; \n-\t20 CFU per il periodo di tirocinio in Farmacia ospedaliera la cui durata massima sia di 4 mesi.\nIl periodo di studio all'estero sarà riconosciuto valido previa acquisizione di almeno il 70% dei CFU previsti nel learning agreement, mentre l'attività di tesi o di tirocinio sarà ritenuta valida solo dopo acquisizione di tutti i crediti previsti.\nPer gli studenti che abbiano portato a compimento in modo soddisfacente il programma formativo, sono previsti opportuni incentivi che, su proposta del Docente responsabile, verranno corrisposti dalla Commissione in seduta di laurea. Si prevede un punteggio aggiuntivo al voto di laurea variabile da un minimo di 1 ad un massimo di 3 punti in funzione della durata del periodo di studio, dell'ammontare di CFU conseguiti e del risultato complessivo ottenuto dallo studente.",
+            "propedeuticita": "A partire dagli immatricolati nell'A.A. 2016/17, gli studenti, per iscriversi al terzo anno di corso, dovranno aver sostenuto entro il 30 settembre tutti gli esami del primo anno con votazione espressa in trentesimi. Coloro che non sosterranno gli esami previsti saranno collocati d'ufficio al secondo anno ripetente.\n\nTutti gli studenti, per laurearsi, hanno l'obbligo di acquisire una conoscenza della lingua inglese con un livello di idoneità B2, o ad esso assimilabile, o superiore.\n\nQualora vengano inserite nuove propedeuticità, gli studenti sono tenuti a rispettarle se presenti nel manifesto degli studi dell'anno accademico precedente a quello nel quale sostengono l'esame.\n\nSi ricorda agli studenti che la frequenza ai laboratori è obbligatoria e che per frequentare i laboratori è obbligatorio iscriversi. Per le modalità ed i tempi dell'iscrizione ai corsi di laboratorio si consiglia di consultare con attenzione il sito di Facoltà (www.farmacia.unimi.it).\n\nAMMISSIONE AI LABORATORI\nL'ammissione al LABORATORIO DI ANALISI QUALITATIVA è subordinata al superamento, entro il 28 febbraio dell'AA di frequenza del laboratorio stesso, dell'esame di CHIMICA GENERALE, INORGANICA E STECHIOMETRIA.\n\nL'ammissione al LABORATORIO DI ANALISI QUANTITATIVA è subordinata alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI ANALISI QUALITATIVA. Poiché il laboratorio di ANALISI QUANTITATIVA si svolge nel 2 semestre, il laboratorio propedeutico potrà essere frequentato nel 1 semestre dello stesso AA.\n\nL'ammissione al LABORATORIO DI IDENTIFICAZIONE DEI FARMACI è subordinata al superamento, entro il 31 gennaio, dell'esame di CHIMICA FARMACEUTICA E TOSSICOLOGICA I e alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI ANALISI QUANTITATIVA.\n\nL'ammissione al LABORATORIO DI TECNOLOGIA FARMACEUTICA I è subordinata al superamento dell'esame di CHIMICA ORGANICA e alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI ANALISI QUANTITATIVA.\n\nL'ammissione al LABORATORIO DI TECNOLOGIA FARMACEUTICA II è subordinata alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI TECNOLOGIA FARMACEUTICA I.\n\nL'ammissione al LABORATORIO DI ANALISI CHIMICO-TOSSICOLOGICA è subordinata alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI IDENTIFICAZIONE DEI FARMACI.\n\nPer quanto riguarda la propedeuticità di esame, si ricorda che poter sostenere gli esami riportati nella colonna di sinistra della sottostante tabella, gli studenti dovranno aver superato precedentemente gli esami dei corsi propedeutici riportati nella colonna di destra.",
+            "propedeuticitaEng": "A partire dagli immatricolati nell'A.A. 2016/17, gli studenti, per iscriversi al terzo anno di corso, dovranno aver sostenuto entro il 30 settembre tutti gli esami del primo anno con votazione espressa in trentesimi. Coloro che non sosterranno gli esami previsti saranno collocati d'ufficio al secondo anno ripetente.\n\nTutti gli studenti, per laurearsi, hanno l'obbligo di acquisire una conoscenza della lingua inglese con un livello di idoneità B2, o ad esso assimilabile, o superiore.\n\nQualora vengano inserite nuove propedeuticità, gli studenti sono tenuti a rispettarle se presenti nel manifesto degli studi dell'anno accademico precedente a quello nel quale sostengono l'esame.\n\nSi ricorda agli studenti che la frequenza ai laboratori è obbligatoria e che per frequentare i laboratori è obbligatorio iscriversi. Per le modalità ed i tempi dell'iscrizione ai corsi di laboratorio si consiglia di consultare con attenzione il sito di Facoltà (www.farmacia.unimi.it).\n\nAMMISSIONE AI LABORATORI\nL'ammissione al LABORATORIO DI ANALISI QUALITATIVA è subordinata al superamento, entro il 28 febbraio dell'AA di frequenza del laboratorio stesso, dell'esame di CHIMICA GENERALE, INORGANICA E STECHIOMETRIA.\n\nL'ammissione al LABORATORIO DI ANALISI QUANTITATIVA è subordinata alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI ANALISI QUALITATIVA. Poiché il laboratorio di ANALISI QUANTITATIVA si svolge nel 2 semestre, il laboratorio propedeutico potrà essere frequentato nel 1 semestre dello stesso AA.\n\nL'ammissione al LABORATORIO DI IDENTIFICAZIONE DEI FARMACI è subordinata al superamento, entro il 31 gennaio, dell'esame di CHIMICA FARMACEUTICA E TOSSICOLOGICA I e alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI ANALISI QUANTITATIVA.\n\nL'ammissione al LABORATORIO DI TECNOLOGIA FARMACEUTICA I è subordinata al superamento dell'esame di CHIMICA ORGANICA e alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI ANALISI QUANTITATIVA.\n\nL'ammissione al LABORATORIO DI TECNOLOGIA FARMACEUTICA II è subordinata alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI TECNOLOGIA FARMACEUTICA I.\n\nL'ammissione al LABORATORIO DI ANALISI CHIMICO-TOSSICOLOGICA è subordinata alla sola frequenza (non al superamento dell'esame) del LABORATORIO DI IDENTIFICAZIONE DEI FARMACI.\n\nPer quanto riguarda la propedeuticità di esame, si ricorda che poter sostenere gli esami riportati nella colonna di sinistra della sottostante tabella, gli studenti dovranno aver superato precedentemente gli esami dei corsi propedeutici riportati nella colonna di destra."
+            },
+            "cfuMin": 300,
+            "anniDurataCorso": 5,
+            "modalitaAccesso": [
+            {
+            "modalita": "P",
+            "anno": 1,
+            "infoImmatricolazione": "L'accesso al 1° anno del Corso di Laurea in Farmacia è condizionato alla partecipazione di un test on-line (TOLC-F) di valutazione selettivo con limitazione numerica (numero programmato: 300 studenti più 20 studenti extracomunitari residenti all'estero) che darà luogo ad una graduatoria di merito. Il test dovrà essere sostenuto prima dell'immatricolazione. Alla pagina https://tolc.cisiaonline.it/calendario.php è disponibile il calendario dei test TOLC-F organizzati da UNIMI e dalle altre sedi universitarie italiane che aderiscono al test.\n\nPer l'ammissione al corso di laurea si rimanda al bando di concorso disponibile sul sito di Ateneo di Milano alla pagina http://www.unimi.it/studenti/matricole/77610.htm\n\nDovranno sostenere il test tutti coloro che richiedono l'immatricolazione. In dettaglio:\n1. i possessori di un diploma di scuola secondaria superiore o di altro titolo di studio conseguito all'estero e riconosciuto idoneo;\n2. gli iscritti a corsi di laurea dell'Università di Milano o di altre Università italiane (trasferimenti) o straniere (trasferimenti);\n3. i laureati in Università italiane o straniere.\n\nNon dovranno sostenere il test d'ingresso:\n\n1. gli studenti già iscritti al corso di laurea in Farmacia o in Chimica e Tecnologia Farmaceutiche di questa o altra Università solo se hanno sostenuto tutti gli esami, con voto in trentesimi, del primo anno previsti dal manifesto degli studi del corso di laurea di provenienza;\n2. gli studenti già iscritti al corso di laurea in Farmacia o in Chimica e Tecnologia Farmaceutiche di codesto Ateneo che, pur non avendo sostenuto tutti gli esami previsti al primo anno, abbiano comunque sostenuto il test di ammissione negli anni accademici precedenti;\n3. i laureati in Chimica e Tecnologia Farmaceutiche di qualunque ateneo e i laureati in Biotecnologie del Farmaco e in Biotecnologie farmaceutiche (quinquennale) dell'Università degli Studi di Milano;\n4. i laureati in Farmacia in Università straniere.\n\nPer coloro che hanno partecipato al test e non sono risultati ammessi, è disponibile un massimo di 60 posti per l'iscrizione ad un numero limitato di corsi singoli, secondo le indicazioni del regolamento didattico d'ateneo, per acquisire crediti utilizzabili nell'eventualità di una futura iscrizione ad un corso di laurea, previo superamento del test d'ingresso, se previsto.\n\nI termini utili per iscriversi al test saranno resi noti nel bando di concorso disponibile sul sito di Ateneo.",
+            "infoImmatricolazioneURL": "http://www.unimi.it/"
+            }
+            ],
+            "offertaLingue": {
+            "tipo": "I",
+            "lingue": [
+            {
+            "codice": "ita",
+            "linguaManifesto": "Y"
+            }
+            ]
+            },
+            "strutturaCorso": "La durata del Corso di Laurea magistrale è di cinque anni e si articola in dieci semestri, con lezioni frontali, esercitazioni guidate in laboratorio, esercitazioni a posto singolo.\nSulla base delle indicazioni contenute nel Regolamento didattico d'Ateneo e nei Regolamenti di Facoltà, l'impegno orario riservato a ciascun credito formativo (CFU, crediti formativi universitari) sarà il seguente:\n\n-\t8 ore di lezioni frontali o attività didattiche equivalenti e 17 ore di studio individuale\n-\t16 ore di esercitazioni o attività assistite equivalenti e 9 ore di studio e rielaborazione personale\n-\t25 ore di studio individuale\n-\t25 ore di pratica individuale in laboratorio (attività relativa alla preparazione della tesi)\n-\t30 ore di tirocinio.\n\nIl percorso formativo del curriculum in Farmacia si articola in insegnamenti fondamentali (per un totale di 247 CFU, inclusi quelli di Inglese scientifico e Informatica applicata) e un insegnamento di 8 CFU, scelto dallo studente tra quelli attivabili al IV anno di corso. La valutazione dell'insegnamento a scelta verrà effettuata con votazione espressa in trentesimi. I corsi a scelta dello studente presenti in questo Manifesto saranno attivati se scelti da un numero minimo di 15 studenti.\nL'acquisizione da parte dello studente dei CFU stabiliti per ciascun insegnamento, nonché nel caso di insegnamenti articolati in più unità didattiche/moduli, è subordinata al superamento della prova finale d'esame, che dà luogo a votazione in trentesimi, ovvero al superamento di prove di verifica con giudizio di approvato o riprovato per i soli corsi di Inglese scientifico e di Informatica applicata. Ad ogni prova superata lo studente acquisisce i relativi crediti (CFU, crediti formativi universitari) e per essere ammesso alla prova finale (tesi di laurea) deve averne acquisiti 285.\n\nISCRIZIONE CON REGIME DI IMPIEGO A TEMPO PARZIALE\nIn accordo con il regolamento di Ateneo, possono richiedere l'iscrizione con regime di impegno a tempo parziale gli studenti che hanno impegni legati a:\n·\tlavoro - impegno lavorativo non occasionale; \n·\tcura e assistenza dei familiari;\n·\tproblemi personali di salute o di invalidità; \n·\tcura dei figli e gravidanze; \n·\tattività sportiva o artistica \nIl percorso formativo previsto dal regime di iscrizione a tempo parziale non può essere superiore al doppio della durata normale del corso di studio e dovrà rispettare un percorso da completare in 7 anni. Informazioni più dettagliate sono disponibili sul sito di Ateneo.",
+            "strutturaCorsoEng": "La durata del Corso di Laurea magistrale è di cinque anni e si articola in dieci semestri, con lezioni frontali, esercitazioni guidate in laboratorio, esercitazioni a posto singolo.\nSulla base delle indicazioni contenute nel Regolamento didattico d'Ateneo e nei Regolamenti di Facoltà, l'impegno orario riservato a ciascun credito formativo (CFU, crediti formativi universitari) sarà il seguente:\n\n-\t8 ore di lezioni frontali o attività didattiche equivalenti e 17 ore di studio individuale\n-\t16 ore di esercitazioni o attività assistite equivalenti e 9 ore di studio e rielaborazione personale\n-\t25 ore di studio individuale\n-\t25 ore di pratica individuale in laboratorio (attività relativa alla preparazione della tesi)\n-\t30 ore di tirocinio.\n\nIl percorso formativo del curriculum in Farmacia si articola in insegnamenti fondamentali (per un totale di 247 CFU, inclusi quelli di Inglese scientifico e Informatica applicata) e un insegnamento di 8 CFU, scelto dallo studente tra quelli attivabili al IV anno di corso. La valutazione dell'insegnamento a scelta verrà effettuata con votazione espressa in trentesimi. I corsi a scelta dello studente presenti in questo Manifesto saranno attivati se scelti da un numero minimo di 15 studenti.\nL'acquisizione da parte dello studente dei CFU stabiliti per ciascun insegnamento, nonché nel caso di insegnamenti articolati in più unità didattiche/moduli, è subordinata al superamento della prova finale d'esame, che dà luogo a votazione in trentesimi, ovvero al superamento di prove di verifica con giudizio di approvato o riprovato per i soli corsi di Inglese scientifico e di Informatica applicata. Ad ogni prova superata lo studente acquisisce i relativi crediti (CFU, crediti formativi universitari) e per essere ammesso alla prova finale (tesi di laurea) deve averne acquisiti 285.\n\nISCRIZIONE CON REGIME DI IMPIEGO A TEMPO PARZIALE\nIn accordo con il regolamento di Ateneo, possono richiedere l'iscrizione con regime di impegno a tempo parziale gli studenti che hanno impegni legati a:\n·\tlavoro - impegno lavorativo non occasionale; \n·\tcura e assistenza dei familiari;\n·\tproblemi personali di salute o di invalidità; \n·\tcura dei figli e gravidanze; \n·\tattività sportiva o artistica \nIl percorso formativo previsto dal regime di iscrizione a tempo parziale non può essere superiore al doppio della durata normale del corso di studio e dovrà rispettare un percorso da completare in 7 anni. Informazioni più dettagliate sono disponibili sul sito di Ateneo.",
+            "indirizziUtili": [
+            {
+            "descrizione": "Segretario del Collegio Didattico Interdipartimentale: Prof.ssa Irma Colombo",
+            "indirizzo": "Via Trentacoste, 2 Milano",
+            "email": "irma.colombo@unimi.it",
+            "orario": "Previo appuntamento telefonico o e-mail"
+            },
+            {
+            "descrizione": "Presidente del Collegio Didattico Interdipartimentale   Prof. Marco Riva",
+            "indirizzo": "Via Balzaretti, 9 Milano",
+            "email": "m.riva@unimi.it",
+            "orario": "Previo appuntamento telefonico o e-mail"
+            },
+            {
+            "descrizione": "Vice Presidente del Collegio Didattico Interdipartimentale    Prof. Ermanno Valoti",
+            "indirizzo": "Via Mangiagalli, 25 Milano",
+            "email": "ermanno.valoti@unimi.it",
+            "orario": "Previo appuntamento telefonico o e-mail"
+            },
+            {
+            "descrizione": "IMMATRICOLAZIONI E AMMISSIONI",
+            "sito": "http://www.unimi.it/studenti/matricole/77598.htm"
+            },
+            {
+            "descrizione": "Coordinatore dei trasferimenti e passaggi di corso:  Prof.ssa Irma Colombo",
+            "indirizzo": "Via Trentacoste, 2 Milano",
+            "email": "irma.colombo@unimi.it",
+            "orario": "Previo appuntamento telefonico o e-mail"
+            }
+            ],
+            "poloFisico": "Milano",
+            "poloFisicoEng": "Milano",
+            "bando": [
+            {
+            "dataPubblicazioneTestCenterEng": null,
+            "dataFineImmatricolazioneString": "31/07/2019",
+            "dataFineImmatricolazioneEngString": "07-31-2019",
+            "dataInizioImmatricolazioneString": "23/07/2019",
+            "dataInizioImmatricolazioneEngString": "07-23-2019",
+            "dataInizioAmmissioneString": "03/06/2019",
+            "dataInizioAmmissioneEngString": "06-03-2019",
+            "dataFineAmmissioneString": "19/07/2019",
+            "dataFineAmmissioneEngString": "07-19-2019",
+            "dataProvaAmmissioneString": "",
+            "dataProvaAmmissioneEngString": "",
+            "sessione": "1",
+            "urlBandoIta": "https://apps.unimi.it/files/bandi/bando-2020-1-farmacia-a-ciclo-unico-%28classe-lm-13%29.pdf?date=17-07-2019",
+            "dataPubblicazioneIta": "2019-07-16T22:00:00.000Z",
+            "posti": 200,
+            "dataInizioAmmissione": "2019-06-03T07:00:00.000Z",
+            "dataFineAmmissione": "2019-07-19T12:00:00.000Z",
+            "dataInizioImmatricolazione": "2019-07-23T12:00:00.000Z",
+            "dataFineImmatricolazione": "2019-07-31T12:00:00.000Z",
+            "haBando": true
+            },
+            {
+            "dataPubblicazioneTestCenterEng": null,
+            "dataFineImmatricolazioneString": "13/09/2019",
+            "dataFineImmatricolazioneEngString": "09-13-2019",
+            "dataInizioImmatricolazioneString": "09/09/2019",
+            "dataInizioImmatricolazioneEngString": "09-09-2019",
+            "dataInizioAmmissioneString": "01/08/2019",
+            "dataInizioAmmissioneEngString": "08-01-2019",
+            "dataFineAmmissioneString": "04/09/2019",
+            "dataFineAmmissioneEngString": "09-04-2019",
+            "dataProvaAmmissioneString": "",
+            "dataProvaAmmissioneEngString": "",
+            "sessione": "2",
+            "urlBandoIta": "https://apps.unimi.it/files/bandi/bando-2020-2-farmacia-a-ciclo-unico-%28classe-lm-13%29.pdf?date=19-09-2019",
+            "dataPubblicazioneIta": "2019-09-18T22:00:00.000Z",
+            "posti": 100,
+            "postiExtraEU": 20,
+            "postiMarcoPolo": 1,
+            "dataInizioAmmissione": "2019-08-01T07:00:00.000Z",
+            "dataFineAmmissione": "2019-09-04T12:00:00.000Z",
+            "dataInizioImmatricolazione": "2019-09-09T12:00:00.000Z",
+            "dataFineImmatricolazione": "2019-09-13T12:00:00.000Z",
+            "haBando": true
+            }
+            ],
+            "bandoTesto": {
+            "infoIta": "Posti disponibili: 300  + 20 riservati a cittadini Extra UE, 1 riservati a studenti del progetto Marco Polo \n** Sessione: **1\n** Come Iscriversi:** [Bando](https://apps.unimi.it/files/bandi/bando-2020-1-farmacia-a-ciclo-unico-%28classe-lm-13%29.pdf?date&#61;17-07-2019)\n**Presentazione domanda di ammissione:** 03/06/2019 al 19/07/2019\n**Presentazione domanda di immatricolazione:** dal 23/07/2019 al 31/07/2019\n** Sessione: **2\n** Come Iscriversi:** [Bando](https://apps.unimi.it/files/bandi/bando-2020-2-farmacia-a-ciclo-unico-%28classe-lm-13%29.pdf?date&#61;19-09-2019)\n**Presentazione domanda di ammissione:** 01/08/2019 al 04/09/2019\n**Presentazione domanda di immatricolazione:** dal 09/09/2019 al 13/09/2019\n",
+            "infoEng": "Places available: 300  plus 20 reserved to extra UE students, 1 reserved to Marco Polo students\n** Session: **1\nCall for applications is going to be published.\n**Application period:** from 06-03-2019 to 07-19-2019\n**Enrolment period:** from 07-23-2019 to 07-31-2019\n** Session: **2\nCall for applications is going to be published.\n**Application period:** from 08-01-2019 to 09-04-2019\n**Enrolment period:** from 09-09-2019 to 09-13-2019\n"
+            },
+            "immatricolazioniAperte": false,
+            "docentiTutor": "Primo biennio\nA-C Prof. Roberto Maggi\nD-F Dr.ssa Silvia Araneo\nG-L Prof.ssa Patrizia Limonta\nM-R Prof. Alessandro Pedretti\nS-Z Prof.ssa Roberta Moretti \n\nSecondo triennio\nA-D Prof. Alberico Luigi Catapano\nE-H Dr.ssa Alessandra Colciago\nI-M dott.ssa. Gabriella Roda\nN-Q Dott.ssa Montagnani Marelli\nR-Z Prof. Angelo Sala\n\nStudenti stranieri\nProf.ssa Irma Colombo\n\nStudenti Erasmus \nProf.ssa Alessandra Polissi\n\nStudenti lavoratori, Studenti disabili e DSA\nTutti Prof. Ermanno Valoti\n\nTirocinio professionale in Farmacia\nCoordinatore: Prof.ssa Paola Minghetti\nTutor accademici (suddivisione studenti in base a cognome):\nSilvia Araneo (A, D)\nAntonella Casiraghi (B)\nIrma Colombo (C)\nRoberto Maggi (F, L)\nMarica Orioli (E, G, H, I)\nLuca Palugan (J, K, L, N, V, Z)\nAlessandro Pedretti (M)\nPatrizia Restani (O, P, Q)\nMarco Andrea Riva (R, T, U)\nErmanno Valoti (S, W, X, Y)",
+            "obiezioneCoscienza": "SPERIMENTANZIONE ANIMALE: si precisa che attualmente non sono previsti laboratori didattici obbligatori duranti i quali si effettua sperimentazione su animali. Qualora, per lo svolgimento di eventuale tesi sperimentale, lo studente dovesse frequentare un laboratorio di ricerca all'interno del quale si tengono esperimenti su animali, egli potrà esercitare il diritto di obiezione di coscienza in osservanza alla Legge n. 413 del 12 ottobre 1993 \"Norme sull'obiezione di coscienza alla sperimentazione animale\".",
+            "manifesto": {
+            "pdfItaURL": "https://apps.unimi.it/files/manifesti/ita_manifesto_E24of1_2020.pdf",
+            "pdfEngURL": "https://apps.unimi.it/files/manifesti/eng_manifesto_E24of1_2020.pdf"
+            },
+            "risorse": {
+            "biblioteche": "La Biblioteca di Scienze del Farmaco si trova in via Balzaretti 9, cortile interno. \nOrario di apertura: lun.-ven. 8:00-13:15/14:00-17:00; sab. chiuso\nContatti: tel. 0250318424/3/2; fax 0250318421;\ne-mail: biblio.scienzedelfarmaco@unimi.it\nPer maggiori informazioni sui servizi: http://www.sba.unimi.it/bibliofarmacia"
+            },
+            "ruoloPersone": [
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "9528",
+            "nome": "ROBERTO",
+            "cognome": "MAGGI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "14272",
+            "nome": "SILVIA ROSA",
+            "cognome": "ARANEO"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "9949",
+            "nome": "PATRIZIA",
+            "cognome": "LIMONTA"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "15620",
+            "nome": "ALESSANDRO",
+            "cognome": "PEDRETTI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "13494",
+            "nome": "ROBERTA MANUELA",
+            "cognome": "MORETTI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "9837",
+            "nome": "ALBERICO LUIGI",
+            "cognome": "CATAPANO"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "16848",
+            "nome": "ALESSANDRA",
+            "cognome": "COLCIAGO"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "16075",
+            "nome": "GABRIELLA",
+            "cognome": "RODA"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "13923",
+            "nome": "IRMA",
+            "cognome": "COLOMBO"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "16149",
+            "nome": "MARINA",
+            "cognome": "MONTAGNANI MARELLI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "12862",
+            "nome": "ANGELO",
+            "cognome": "SALA"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "17805",
+            "nome": "ALESSANDRA",
+            "cognome": "POLISSI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "10534",
+            "nome": "ERMANNO",
+            "cognome": "VALOTI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "12444",
+            "nome": "PAOLA",
+            "cognome": "MINGHETTI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "16146",
+            "nome": "ANTONELLA",
+            "cognome": "CASIRAGHI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "16307",
+            "nome": "MARICA",
+            "cognome": "ORIOLI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "15723",
+            "nome": "LUCA",
+            "cognome": "PALUGAN"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "10046",
+            "nome": "PATRIZIA",
+            "cognome": "RESTANI"
+            }
+            },
+            {
+            "codice": 1,
+            "tipo": "Tutor",
+            "persona": {
+            "matricola": "14496",
+            "nome": "MARCO ANDREA",
+            "cognome": "RIVA"
+            }
+            }
+            ],
+            "funzionePersone": [
+            {
+            "codiceUO": "170015",
+            "descrizione": "Referente AQ del corso di studio",
+            "persona": {
+            "matricola": "15620",
+            "nome": "ALESSANDRO",
+            "cognome": "PEDRETTI",
+            "email": "alessandro.pedretti@unimi.it"
+            },
+            "codiceFunzione": "NO0013"
+            },
+            {
+            "codiceUO": "7048",
+            "descrizione": "PRESIDENTE DEL COLLEGIO DIDATTICO INTERDIPARTIMENTALE",
+            "persona": {
+            "matricola": "14496",
+            "nome": "MARCO ANDREA",
+            "cognome": "RIVA",
+            "email": "m.riva@unimi.it"
+            },
+            "codiceFunzione": "NFUZ69"
+            }
+            ],
+            "orarioLezioni": {
+            "itaURL": "https://orari.unimi.it/PortaleStudenti/index.php?view=easycourse&include=corso&anno=2019&cdl=E24&_lang=it",
+            "engURL": "https://orari.unimi.it/PortaleStudenti/index.php?view=easycourse&include=corso&anno=2019&cdl=E24&_lang=en"
+            }
+            },
+            "messages": null,
+            "errors": null
+            }
+        </textarea>
+      </div>
+    </div>
+    <!-- end row 1-->
+    <!-- END RAW DATA-->
   </div>
   <!-- /.container -->
-
+  
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
@@ -234,6 +1750,7 @@
     </div>
     <!-- /.container -->
   </footer>
+  <!-- end Footer -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
